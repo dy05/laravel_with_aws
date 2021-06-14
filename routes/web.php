@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', [\App\Http\Controllers\ImageController::class, 'create']);
+Route::post('/', [\App\Http\Controllers\ImageController::class, 'store']);
